@@ -4,15 +4,21 @@ import { useState,useEffect } from 'react';
 import { MyComponent, SignIn, SignUp, ThreeDFace, UserInfo } from './components';
 import { AuthState } from './components/context/authContext';
 
+const   users = JSON.parse(localStorage.getItem("users")).map(e=>e.name);
 
 function App() {
-  const {toggle} = AuthState();
+  const {toggle, searchusers} = AuthState();
 
    const [searchQuery, setSearchQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
+   const [userNames,setUserNames] = useState(JSON.parse(localStorage.getItem("users")).map(e=>e.name));
 
-  const userNames = JSON.parse(localStorage.getItem("users")).map(e=>e.name);
+  useEffect(()=>{
+  setUserNames(JSON.parse(localStorage.getItem("users")).map(e=>e.name))
+  },[isFocused])
+
+  console.log(userNames);
 
   useEffect(() => {
     const handleInputChange = (event) => {
@@ -47,7 +53,7 @@ function App() {
 
   const onChange = (e) =>{
     setSearchQuery(e.target.value)
-    const sugeested = suggestions.filter(item=>{
+    const sugeested = userNames.filter(item=>{
    const data = searchQuery.toLowerCase()
    return data && item.toLowerCase().startsWith(data)
   })

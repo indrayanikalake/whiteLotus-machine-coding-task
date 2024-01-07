@@ -44,7 +44,7 @@ const UserInfo = () => {
               
                 
                
-              <img src={user.pic} loading='lazy' alt="user_profile" className='rounded-4xl shadow-xl shadow-gray-500 p-5 w-[420px] h-[320px]  ' />
+              <img src={user.pic} loading='lazy' alt="user_profile" className='rounded-4xl shadow-xl shadow-gray-500 p-5 w-[400px] h-[320px]  ' />
               <div className="absolute inset-0 bg-opacity-50"></div>
               <div className=" p-4">
                <p className="text-white text-2xl font-bold ">{user?.name}</p>
