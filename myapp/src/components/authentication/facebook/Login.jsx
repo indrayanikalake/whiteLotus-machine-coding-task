@@ -10,7 +10,7 @@ import { LoginSocialFacebook } from 'reactjs-social-login';
    
       return (
       <LoginSocialFacebook
-        appId="1088597931155576"
+        appId="1081400563210221"
         fields="id, first_name, picture"
         onResolve={(data)=>console.log("response>>>>>",data)}
         onReject={(error)=>console.log("error>>>>>>",error)}

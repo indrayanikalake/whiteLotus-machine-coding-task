@@ -3,6 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { AuthState } from '../../context/authContext';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import { cloudinaryId, firebaseAuth } from '../../../data';
 
 
 const SIgnUp = () => {
@@ -73,7 +74,7 @@ if (user.password.length < 8) {
             data.append("file",pic);
             data.append("upload_preset","chat-app");
             data.append("cloud_name","ds3ryg3iy");
-            fetch("https://api.cloudinary.com/v1_1/ds3ryg3iy/image/upload",{
+            fetch(cloudinaryId,{
                 method:"post",
                 body:data
             }).then((res)=>res.json())
@@ -103,13 +104,16 @@ if (user.password.length < 8) {
   
        if(validate()){
         try{
-        const response = await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDubbpyxM_NMjx0e1N4oGts_uCVX86KlUw',payload)
+        const response = await axios.post(firebaseAuth,payload)
         console.log(JSON.parse(response.config.data)); 
         
        
          let users = JSON.parse(localStorage.getItem("users")) || [];
          users.push(JSON.parse(response.config.data));
          localStorage.setItem("users", JSON.stringify(users));
+         toast.success("Registration successfull",{
+          position:"top-center"
+         })
         
       }catch(error){
             console.log(error)
