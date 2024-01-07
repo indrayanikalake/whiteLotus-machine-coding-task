@@ -65,7 +65,7 @@ function App() {
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         placeholder="Search for users"
-        className=' bg-slate-800 md:w-[950px] p-2 m-5 rounded-md shadow-md shadow-slate-700'
+        className=' bg-slate-800 md:w-[850px] p-2 m-5 rounded-md shadow-md shadow-slate-700'
       />
       {isFocused && suggestions.length > 0 && (
         <div>

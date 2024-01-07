@@ -142,7 +142,7 @@ useEffect(() => {
     <div>
       <form
       onSubmit={handleSubmit}
-      className='h-full text-white flex flex-col space-y-5 px-20 py-10 gold-white-gradient'>
+      className='h-full text-white flex flex-col space-y-5 px-20 py-8 gold-white-gradient'>
         <div>
         <label htmlFor="name" className=' block text-md font-medium mb-2'>User Name</label>
         <input type="text"
