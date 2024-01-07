@@ -1,0 +1,75 @@
+
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+}
+
+.blue-bangon-gradient{
+  background:#000000;
+  background: linear-gradient(90.13deg, #1212da 1.9%, #aaf2f4 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #040487 1.9%, #acb8f1 97.5%);
+}
+.bg-image{
+  background: url('https://tse2.mm.bing.net/th?id=OIP.NmJB6PBMPHCtHyUMmx0z4AHaEK&pid=Api&P=0&h=180');
+ background-size: cover;
+ filter: blur('50px');
+}
+
+.borderA{
+  box-shadow:5px 5px 10px rgb(rgb(237, 192, 192), rgb(113, 151, 113), rgb(105, 105, 106));
+}
+
+.gold-white-gradient {
+  background:#000000;
+  background: linear-gradient(90.13deg, #3b3b01 1.9%, #070707 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #4a5902 1.9%, #0c0c0c 97.5%);
+}
+
+.orange-text-gradient{
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #f12711,
+    #f5af19
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #f12711,
+    #f5af19
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pink-text-gradient {
+  background: #ec008c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #ec008c,
+    #fc6767
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #ec008c,
+    #fc6767
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

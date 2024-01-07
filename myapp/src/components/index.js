@@ -1,0 +1,5 @@
+export {default as SignUp } from './authentication/email/SIgnUp'
+export { default as MyComponent} from './authentication/facebook/Login'
+export { default as SignIn } from './authentication/email/SignIn'
+export { default as UserInfo } from './uerInfo/UserInfo'
+export { default as ThreeDFace} from './threeD/ThreeD'
