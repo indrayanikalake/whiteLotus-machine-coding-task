@@ -76,7 +76,7 @@ function App() {
       {isFocused && suggestions.length > 0 && (
         <div>
      <ul>
-  {suggestions.filter((suggestion) => (
+  {suggestions.map((suggestion) => (
     <li key={suggestion}
     className='bg-slate-500 rounded-md text-white ml-4'
     onClick={() => handleSuggestionClick(suggestion)}>
@@ -101,7 +101,7 @@ function App() {
      <MyComponent />
     </div>
    </div>
-   
+  
     <UserInfo />
    </div>
   );
