@@ -40,7 +40,7 @@ const UserInfo = () => {
         speed:450
       }}
      > 
-            <div key={idx} className='bg-image mb-6 relative rounded-4xl shadow-md shadow-gray-600'>
+            <div key={idx} className='bg-image mb-6 relative rounded-xl shadow-inner shadow-blue-600 '>
               
                 
                
