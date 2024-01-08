@@ -62,7 +62,7 @@ if (user.password.length < 8) {
         
        }else{
         console.log("Please Sign In")
-        toast.error("Please Sign In",{
+        toast.error("Please Sign Up",{
             position:"top-center"
         })
        }
