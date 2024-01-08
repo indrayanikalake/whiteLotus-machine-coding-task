@@ -4,7 +4,7 @@ import { useState,useEffect } from 'react';
 import { MyComponent, SignIn, SignUp, ThreeDFace, UserInfo } from './components';
 import { AuthState } from './components/context/authContext';
 
-const   users = JSON.parse(localStorage.getItem("users")).map(e=>e.name);
+const   users = JSON.parse(localStorage.getItem("users"))?.map(e=>e.name);
 
 function App() {
   const {toggle, searchusers} = AuthState();
@@ -12,10 +12,10 @@ function App() {
    const [searchQuery, setSearchQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
-   const [userNames,setUserNames] = useState(JSON.parse(localStorage.getItem("users")).map(e=>e.name));
+   const [userNames,setUserNames] = useState(JSON.parse(localStorage.getItem("users"))?.map(e=>e.name));
 
   useEffect(()=>{
-  setUserNames(JSON.parse(localStorage.getItem("users")).map(e=>e.name))
+  setUserNames(JSON.parse(localStorage.getItem("users"))?.map(e=>e.name))
   },[isFocused])
 
   console.log(userNames);
@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     const handleInputChange = (event) => {
       setSearchQuery(event.target.value);
-      const filteredSuggestions = userNames.filter((name) =>
+      const filteredSuggestions = userNames?.filter((name) =>
         name.toLowerCase().startsWith(searchQuery.toLowerCase())
       );
       setSuggestions(filteredSuggestions);
@@ -76,7 +76,7 @@ function App() {
       {isFocused && suggestions.length > 0 && (
         <div>
      <ul>
-  {suggestions.map((suggestion) => (
+  {suggestions?.map((suggestion) => (
     <li key={suggestion}
     className='bg-slate-500 rounded-md text-white ml-4'
     onClick={() => handleSuggestionClick(suggestion)}>

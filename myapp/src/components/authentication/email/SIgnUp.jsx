@@ -203,7 +203,7 @@ useEffect(() => {
        <button type='submit' 
        className='py-2 px-3 w-48 rounded-xl bg-black cursor-pointer'
        >Sign Up</button>
-       <p className=' text-md text-white cursor-pointer' onClick={()=>setToggle(true)}>Already a User? Login</p>
+       <p className='bg-violet-800 text-md text-white cursor-pointer' onClick={()=>setToggle(true)}>Already a User? Login</p>
       </form>
       <ToastContainer />
     </div>

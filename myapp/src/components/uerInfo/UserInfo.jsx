@@ -8,7 +8,7 @@ const UserInfo = () => {
   const usersInfo = JSON.parse(localStorage.getItem("users"));
   const [users, setUsers]= useState([])
   useEffect(()=>{
-   setUsers([usersInfo])
+   setUsers(usersInfo? [usersInfo] : [])
      },[allusers])
     
     console.log(JSON.parse(localStorage.getItem("users")))
@@ -29,7 +29,7 @@ const UserInfo = () => {
   return (
     <div >
      
-      {users.length>0? (
+      {users[0]!==null? (
       <div  className=" ml-2 grid grid-cols-3 gap-4 mt-10 ">
        
         {users[0]?.map((user, idx)=>(

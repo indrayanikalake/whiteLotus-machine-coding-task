@@ -77,6 +77,7 @@ if (user.password.length < 8) {
   return (
     <div>
        <div>
+        
       <form
       onSubmit={handleSubmit}
       className='h-full text-white flex flex-col space-y-10 px-24 py-10 gold-white-gradient '>
@@ -120,7 +121,7 @@ if (user.password.length < 8) {
        <button type='submit' 
        className='py-2 px-3 w-48 rounded-xl bg-black cursor-pointer'
        >Sign In</button>
-       <p className=' text-white text-md py-2 px-3 cursor-pointer' onClick={()=>setToggle(false)}>Register</p>
+       <p className='bg-violet-800 text-white text-md py-2 px-3 cursor-pointer' onClick={()=>setToggle(false)}>Register</p>
       </form>
     </div>
     </div>
